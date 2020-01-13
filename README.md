@@ -32,7 +32,7 @@ wget -O data/fever/fever.db https://s3-eu-west-1.amazonaws.com/fever.public/wiki
 ```
 
 ### For baseline system
-Create a term-document count matrix for each split, and then merge the count matrices.
+Create a 2gram-document count matrix for each split, and then merge the count matrices.
     
     wget https://s3-eu-west-1.amazonaws.com/fever.public/wiki-pages.zip
     unzip wiki-pages.zip -d baseline/data
@@ -59,7 +59,7 @@ python build_gear_input_set.py
 cd ..
 ```
 
-Feature extraction needs to download our pre-trained BERT-Pair model ([Google Cloud](https://drive.google.com/drive/folders/1y-5VdcrqEEMtU8zIGcREacN1JCHqSp5K)) and put the files into the ``pretrained_models/BERT-Pair/`` folder.
+Feature extraction needs to download the pre-trained BERT-Pair model ([Google Cloud](https://drive.google.com/drive/folders/1y-5VdcrqEEMtU8zIGcREacN1JCHqSp5K)) and put the files into the ``pretrained_models/BERT-Pair/`` folder.
 
 Then the folder will look like this:
 ```

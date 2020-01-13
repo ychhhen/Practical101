@@ -5,8 +5,6 @@ This practical implements the baseline from [FEVER: A large-scale dataset for Fa
 
 ## Installation
 
-Clone the repositor
-
 Install requirements 
 
     pip install -r requirements.txt

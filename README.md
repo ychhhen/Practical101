@@ -1,4 +1,4 @@
-# Fact Extraction and VERification
+# L101 Practical code
 
 This practical implements the baseline from [FEVER: A large-scale dataset for Fact Extraction and VERification.](https://arxiv.org/abs/1803.05355) and an improved system  from [GEAR: Graph-based Evidence Aggregating and Reasoning for Fact Verification](https://arxiv.org/abs/1908.01843).
 
@@ -86,7 +86,7 @@ The remaining tasks of the baseline are done in Jupyter notebook `fever.ipynb`.
 For the improved system the tasks are done as follows.
 ```
 #training
-cd
+cd verification
 CUDA_VISIBLE_DEVICES=0 python train.py
 ```
 

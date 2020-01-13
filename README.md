@@ -1,11 +1,9 @@
-# Fact Extraction and VERification
+# L101 Practical code
 
 This practical implements the baseline from [FEVER: A large-scale dataset for Fact Extraction and VERification.](https://arxiv.org/abs/1803.05355) and an improved system  from [GEAR: Graph-based Evidence Aggregating and Reasoning for Fact Verification](https://arxiv.org/abs/1908.01843).
 
 
 ## Installation
-
-Clone the repositor
 
 Install requirements 
 
@@ -34,7 +32,7 @@ wget -O data/fever/fever.db https://s3-eu-west-1.amazonaws.com/fever.public/wiki
 ```
 
 ### For baseline system
-Create a term-document count matrix for each split, and then merge the count matrices.
+Create a 2gram-document count matrix for each split, and then merge the count matrices.
     
     wget https://s3-eu-west-1.amazonaws.com/fever.public/wiki-pages.zip
     unzip wiki-pages.zip -d baseline/data
@@ -61,7 +59,7 @@ python build_gear_input_set.py
 cd ..
 ```
 
-Feature extraction needs to download our pre-trained BERT-Pair model ([Google Cloud](https://drive.google.com/drive/folders/1y-5VdcrqEEMtU8zIGcREacN1JCHqSp5K)) and put the files into the ``pretrained_models/BERT-Pair/`` folder.
+Feature extraction needs to download the pre-trained BERT-Pair model ([Google Cloud](https://drive.google.com/drive/folders/1y-5VdcrqEEMtU8zIGcREacN1JCHqSp5K)) and put the files into the ``pretrained_models/BERT-Pair/`` folder.
 
 Then the folder will look like this:
 ```
@@ -88,7 +86,7 @@ The remaining tasks of the baseline are done in Jupyter notebook `fever.ipynb`.
 For the improved system the tasks are done as follows.
 ```
 #training
-cd
+cd verification
 CUDA_VISIBLE_DEVICES=0 python train.py
 ```
 
